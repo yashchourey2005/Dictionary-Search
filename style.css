@@ -12,7 +12,10 @@ body{
 .upper-heading{
     background-color: #22223b;
     color:  white;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .lower-heading{
@@ -21,4 +24,15 @@ body{
 
 #book-icon{
     font-size: 20vh;
+}
+
+.container{
+    border-radius: 3rem;
+    box-shadow: 5px 5px 10px black;
+}
+
+.logo{
+    height: 8rem;
+    width: auto;
+    margin: 0;
 }

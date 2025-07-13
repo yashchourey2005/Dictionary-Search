@@ -12,7 +12,7 @@ const options = {
 let search = document.querySelector(".lower-heading");
 let para = document.querySelector(".search-result");
 let input = document.querySelector(".search-word");
-let seachbtn = document.querySelector(".btn");
+let searchbtn = document.querySelector(".btn");
 
 async function searchWord(word){
 
@@ -28,12 +28,17 @@ async function searchWord(word){
 }
 
 
-seachbtn.addEventListener("click", ()=>{
+searchbtn.addEventListener("click", (e)=>{
+	e.preventDefault();
 	let word = input.value;
 	search.innerHTML = `<b>${word}</b>`
 	searchWord(word).then((res)=>{
 	console.log(res);
-	para.innerText = res.definition;
+	if(res.definition){
+		para.innerText = res.definition;
+	}else{
+		para.innerText = "Result Not Found !......";
+	}
 })
 });
 
